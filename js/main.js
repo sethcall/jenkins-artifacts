@@ -3,11 +3,13 @@
 
     $(function() {
 
-	// check if config file exists before anything else
-	if (window.jenkins === undefined || !jenkins.url || !jenkins.projects) {
-		alert("Make sure js/config/jenkins.js is correctly configured. Check README.md for more info.");
-		return;
-	}
+        // check if config file exists before anything else
+        if (window.jenkins === undefined || !jenkins.url || !jenkins.projects) {
+            alert("Make sure js/config/jenkins.js is correctly configured. Check README.md for more info.");
+            return;
+        }
+
+        $('.brand').attr('href', jenkins.rest.stripCredentials(jenkins.url))
 
         var version = 'lastSuccessfulBuild'
         var itemsPerRow = 3;

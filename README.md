@@ -19,10 +19,4 @@ Tips
 
 Using with Authenticated Jenkins
 --------------------------------
-If you have authentication configured on Jenkins, you can get by with a hardcoded user/pass in the jenkins base URL, assuming that this is OK with your security policy since this user/pass will be completely open to the user of this page.
-
-Example in js/config/jenkins.js
-
-```
-jenkins.url='http://user:password@jenkins.company.com'
-```
+TODO: redirect user to login with Jenkins

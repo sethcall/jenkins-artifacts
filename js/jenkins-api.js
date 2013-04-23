@@ -1,6 +1,15 @@
 (function(context, $) {
 
 
+    var stripCredentials = function stripCredentials(url) {
+        var uri = document.createElement('a')
+        uri.href = url
+
+        var indexOfHostname = url.indexOf(uri.hostname)
+
+
+        return uri.protocol + "//" + url.substring(indexOfHostname)
+    }
 
     // returns user-ready path to project
     var projectPath = function projectPath(project) {
@@ -36,6 +45,7 @@
     // pin to global object
     // --------------------
     context.rest = {}
+    context.rest.stripCredentials = stripCredentials
     context.rest.buildPath = buildPath
     context.rest.projectPath = projectPath
     context.rest.artifactPath = artifactPath
