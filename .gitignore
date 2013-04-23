@@ -1,3 +1,5 @@
-*.~
+*~
 *.swp
 js/config/jenkins.js
+.idea
+
