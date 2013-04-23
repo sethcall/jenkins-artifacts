@@ -1,0 +1,15 @@
+// TODO: copy this file into js/config/jenkins.js, and update the settings below
+
+
+window.jenkins = {}
+
+jenkins.url = "http://yourhost"
+
+jenkins.projects = [
+    {
+        name : "some-project1"
+    },
+    {
+        name : "some-project2"
+    }
+]
