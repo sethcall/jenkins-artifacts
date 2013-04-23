@@ -9,11 +9,16 @@ Installation
 * Copy js/config/jenkins.js.example to js/config/jenkins.js
 * Edit js/config/jenkins.js to point to your jenkins base URL, and the names of projects that you would like artifacts to show up for.
 
+Configuring Jenkins
+===================
+Due to this change: https://issues.jenkins-ci.org/browse/JENKINS-17005, you have to start jenkins with the following argument added:
+-Dhudson.model.Api.INSECURE=true
+
 Tips
 ====
 
-Jenkins with Authentication
----------------------------
+Using with Authenticated Jenkins
+--------------------------------
 If you have authentication configured on Jenkins, you can get by with a hardcoded user/pass in the jenkins base URL, assuming that this is OK with your security policy since this user/pass will be completely open to the user of this page.
 
 Example in js/config/jenkins.js
